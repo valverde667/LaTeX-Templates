@@ -1,0 +1,54 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{common}[2014/08/21 Example package]
+\RequirePackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{amsmath}
+\RequirePackage{amsthm} %lets us use \begin{proof}
+\RequirePackage{amssymb} %gives us the character \varnothing
+\RequirePackage{empheq} %box aligned equations 
+\RequirePackage{graphicx}
+\RequirePackage{mathtools}
+\newcommand{\dd}{\ensuremath{\mathrm{d}}} %typeset differential d 
+
+%Imports for using python and listing code. The code list will have a color background 
+%and the lines will be numbered. 
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+%Example use
+%begin{lstlisting}[language = Python]
+%type code here...
+%end{lstlisting}
+%Or, import a script 
+%\lstinputlisting[language=Octave]{BitXorMatrix.m}
